@@ -21,7 +21,7 @@ ADMIN_PASSWORD = 'secret'
 APP_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # The playhouse.flask_utils.FlaskDB object accepts database URL configuration.
-UPLOAD_FOLDER = '/home/shreyas/sav'
+UPLOAD_FOLDER = '.'
 # The secret key is used internally by Flask to encrypt session data stored
 # in cookies. Make this unique for your app.
 SECRET_KEY = 'shhh, secret!'
