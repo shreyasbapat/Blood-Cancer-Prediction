@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Report{% endblock %}
+
+{% block content_title %}Report{% endblock %}
+
+{% block content %}
+    <h1>This is your blood report: </h1>
+
+    <p> Your blood sample has <b>{{ cell }}</b> type white blood cell in excess with <b>total {{ count }} no(s)</b>.
+      Please visit nearest doctor in case of any difficulties in undertanding this. </p>
+    <h4>General Implications: </h4>
+    <p>You might be having <b>{{ disease }}</b> Hope you get well soon :)</p>
+{% endblock %}

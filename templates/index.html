@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Upload blood samples{% endblock %}
+
+{% block content_title %}{% if search %}Search "{{ search }}"{% else %}Saakar Initiative (SMS Team){% endif %}{% endblock %}
+
+{% block content %}
+  <h3>Welcome to the smart AI enabled portal of blood analysis!</h3>
+  <p>If you’ve ever had your blood drawn, chances are that you’ve had a blood test where your doctor looked up the following statistics about your blood among others:
+<br>
+- The total number of White Blood Cells (WBCs) in your blood stream.<br>
+- The number of Neutrophils, Lymphocytes, Basophils, and Eosinophils (all types of WBCs) in your cell. This is known as a differentiated blood cell count.<br>
+- The density of WBCs in our blood stream provides a glimpse into the state of our immune system and any potential risks we might be facing. In particular, a dramatic change in the WBC count relative to your baseline is generally a sign that your body is currently being affected by an antigen. Moreover, a variation in a specific type of WBC generally correlates with a specific type of antigen.</p>
+ <h3>We will analyse your blood on the fly!</h3>
+  <a href="/login" ><button type="button" class="btn small help-button">Login</button></a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Files{% endblock %}
+
+{% block content_title %}Choose a file to upload!{% endblock %}
+
+{% block content %}
+    <form action='' method="POST" enctype="multipart/form-data">
+        <p><input type='file' name='file[]' multiple=''>
+        <br><br>
+        <input type='submit' value='Upload'>
+        </p>
+
+    <!-- </form>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default" type="submit">Log in</button>
+      </div>
+    </div>
+  </form> -->
+{% endblock %}
