@@ -3,6 +3,7 @@ import functools
 import os
 import re
 import urllib
+from time import sleep
 
 from flask import (Flask, flash, Markup, redirect, render_template, request,
                    Response, session, url_for)
@@ -94,6 +95,7 @@ def tell_the_fortune(path):
 
 @app.route('/analyse/')
 def analyse_it():
+    sleep(10)
     path = "../static/" + app.config['last_name']
     maxi = tell_the_fortune(path)
     dis = {
@@ -108,14 +110,10 @@ def analyse_it():
         2 : "high stress levels or you might be smoking cigarettes or sniffing tobacco. You might even face chronic myeloid leukemia.",
         3 : "Endocrine disorders, Autoimmune disorders, Skin disorders, Parasitic and fungal diseases or Tumors and Toxins.",
     }
-    return render_template('result.html', cell = dis[maxi], count = maxi + 2, disease = disease[maxi])
-
-@app.route('/last/')
-def last_page():
     path  = "../static/1_1.jpg"
     path1 = "../static/1_2.jpg"
     mask = "../static/mask.jpg"
-    return render_template('image_report.html', wbc_image=mask, wbc_image1=path1, wbc_image2=path)
+    return render_template('result.html', cell = dis[maxi], count = maxi + 2, disease = disease[maxi], wbc_image=mask, wbc_image1=path1, wbc_image2=path)
 
 @app.route('/')
 def index():

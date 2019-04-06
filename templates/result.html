@@ -12,11 +12,13 @@
     <h4>General Implications: </h4>
     <p>You might be having <b>{{ disease }}</b> Hope you get well soon :)</p>
 
-    </form>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <a href="/last"><button class="btn btn-default" type="submit">Detailed Report</button></a>
-      </div>
+    <div>
+        <span style="display: inline-block; padding: 0 70px">
+           <img src="{{ wbc_image }}" alt="WBC Image" width=300vh>
+        </span>
+        <span style="display: inline-block">
+          <img src="{{ wbc_image1 }}" alt="WBC Image" width=100vh>
+          <img src="{{ wbc_image2 }}" alt="WBC Image" width=100vh>
+        </span>
     </div>
-  </form>
 {% endblock %}
