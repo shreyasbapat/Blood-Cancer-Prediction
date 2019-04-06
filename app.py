@@ -110,6 +110,13 @@ def analyse_it():
     }
     return render_template('result.html', cell = dis[maxi], count = maxi + 2, disease = disease[maxi])
 
+@app.route('/last/')
+def last_page():
+    path  = "../static/1_1.jpg"
+    path1 = "../static/1_2.jpg"
+    mask = "../static/mask.jpg"
+    return render_template('image_report.html', wbc_image=mask, wbc_image1=path1, wbc_image2=path)
+
 @app.route('/')
 def index():
     return render_template('index.html')

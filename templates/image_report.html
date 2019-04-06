@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Detailed Report{% endblock %}
+
+{% block content_title %}Detailed Report{% endblock %}
+
+{% block content %}
+    <h1>The masked image for WBC is: </h1>
+    <img src="{{ wbc_image }}" alt="WBC Image">
+
+    <h2>The WBC's present are localised:</h2>
+    <img src="{{ wbc_image1 }}" alt="WBC Image">
+    <img src="{{ wbc_image2 }}" alt="WBC Image">
+{% endblock %}
